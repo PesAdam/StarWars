@@ -1,14 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import SearchBar from './components/SearchBar';
+import { SearchBar } from './components/SearchBar';
+import { Card } from './components/Card';
 import '../src/styles/app.scss';
 
 
 function App() {
-  
-  const handleSearch = (searchTerm: string) => {
-    console.log(searchTerm);
-    // vykonajte vyhladavanie s pouzitim searchTerm
-  };
   
   return (
     <div className="App">
@@ -16,7 +12,8 @@ function App() {
         <h1 className='heading'>STAR WARS</h1>
         <h2>planets</h2>
       </div>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar />
+      <Card />
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
