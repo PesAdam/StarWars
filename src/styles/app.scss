@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'background';
+@import 'searchbar';
+
+
+.App{
+    .heading{
+        margin: auto;
+        color: $colorHeading;
+        text-align: center;
+        font-family: 'Star Wars', sans-serif;
+            
+        h1{
+            font-size: 6.5rem;
+            letter-spacing: .3rem;
+            //line-height: 20rem;
+            margin-top: 5rem;
+        }
+        h2{
+            font-size: 3rem;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.App{
+    .searchBar{
+        margin: auto;
+        text-align: center;
+        input{
+            height: 3rem;
+            width: 40%;
+            border: solid $colorHeading .3rem;
+            border-radius: .2rem;
+            background: #333;
+            color: #fff;
+            font-size: 2rem;
+        }
+    }
+}
