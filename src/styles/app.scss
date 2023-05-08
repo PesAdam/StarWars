@@ -4,6 +4,7 @@
 @import 'card';
 
 .App{
+    overflow-y: auto;
     .heading{
         margin: auto;
         color: $colorHeading;
