@@ -34,7 +34,9 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   return (
     <>
       <div className="searchBar">
-        <FaSearch />
+        <div className="icon">
+          <FaSearch />
+        </div>
         <input
           type="text"
           name="search"
