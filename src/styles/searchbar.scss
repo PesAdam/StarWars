@@ -7,7 +7,8 @@
         justify-content: center;
         input{
             height: 3rem;
-            width: 45%;
+            max-width: 610px;
+            width: 100%;
             border: solid $colorHeading .3rem;
             border-radius: .2rem;
             background: #333;
@@ -29,6 +30,33 @@
             svg{
                 width: 50%;
                 height: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .App{
+        .searchBar{
+            input{
+                width: 80%;
+            }
+            .icon{
+                svg{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 498px){
+    .App{
+        .searchBar{
+            .icon{
+                svg{
+                    width: 100%;
+                }
             }
         }
     }
