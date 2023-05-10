@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 export type SearchResultProps = {
   name: string;
@@ -13,12 +13,20 @@ export const SearchResult: React.FC<SearchResultProps> = ({
   terrain,
   climate
 }) => {
+  const [showMore, setShowMore] = useState(false);
   return (
     <li className="searchResult">
         <h2>{name}</h2>
-        <p>Population: {population}</p>
-        <p>Terrain: {terrain}</p>
-        <p>Climate: {climate}</p>
+        {showMore && (
+          <>
+            <p>Population: {population}</p>
+            <p>Terrain: {terrain}</p>
+            <p>Climate: {climate}</p>
+          </>
+        )}
+        <button className="show-more" onClick={() => setShowMore(!showMore)}>
+          {showMore ? "Show less" : "Show more"}
+        </button>
     </li>
 
   );

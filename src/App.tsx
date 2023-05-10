@@ -38,13 +38,15 @@ export const App: React.FC<AppProps> = () => {
         <div className="cards">
           <ul>
             {searchResults.map((result) => (
-            <SearchResult name={result.name} 
+            <SearchResult key={result.name}
+                          name={result.name} 
                           population={result.population} 
                           terrain={result.terrain}
-                          climate={result.climate}
+                          climate={result.climate}  
                           />
             ))}
           </ul>
+          
         </div>
       </div>
     </>
