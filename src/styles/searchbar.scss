@@ -56,9 +56,10 @@
     .App{
         .searchBar{
             input{
-                font-size: .6rem;
+                // font-size: .6rem;
             }
             .icon{
+                width: 6%;
                 svg{
                     width: 110%;
                     height: 105%;
