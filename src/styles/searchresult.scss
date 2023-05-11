@@ -25,6 +25,7 @@
                 align-items: center;
                 justify-content: space-evenly;
                 padding: 5px;
+                
                 p{
                     margin: 0;
                 }
@@ -35,6 +36,9 @@
                     height: 35px;
                     width: 110px;
                     border-radius: 5px;
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
             }
         }
