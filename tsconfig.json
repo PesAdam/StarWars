@@ -1,20 +1,18 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "target": "es6",
-      "jsx": "react",
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "moduleResolution": "node",
-      "baseUrl": ".",
-      "paths": {
-        "*": ["src/*"]
-      },
-      "allowJs": true,
-      "jsxImportSource": "react"
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
     },
-    "include": ["src/**/*", "src/**/*.scss"],
-    
-    "exclude": ["node_modules", "build", "scripts"]
-  }
+    "allowJs": true
+  },
+  "include": ["src/**/*", "src/**/*.scss"],
+  "exclude": ["node_modules", "build", "scripts"]
+}

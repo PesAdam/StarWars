@@ -1,33 +1,35 @@
-import React, {useState} from "react";
+import React from "react";
 
 export type SearchResultProps = {
   name: string;
   population: string;
   terrain: string;
   climate: string;
+  isExpanded: boolean;
+  onToggleExpand: () => void;
 };
 
 export const SearchResult: React.FC<SearchResultProps> = ({
   name,
   population,
   terrain,
-  climate
+  climate,
+  isExpanded,
+  onToggleExpand
 }) => {
-  const [showMore, setShowMore] = useState(false);
   return (
-    <li className="searchResult">
-        <h2>{name}</h2>
-        {showMore && (
+    <li className={`searchResult ${isExpanded ? 'expanded' : ''}`}>
+        <h2 onClick={onToggleExpand}>{name}</h2>
+        {isExpanded && (
           <>
             <p>Population: {population}</p>
             <p>Terrain: {terrain}</p>
             <p>Climate: {climate}</p>
           </>
         )}
-        <button className="show-more" onClick={() => setShowMore(!showMore)}>
-          {showMore ? "Show less" : "Show more"}
+        <button className="show-more" onClick={onToggleExpand}>
+          {isExpanded ? "Show less" : "Show more"}
         </button>
     </li>
-
   );
 };

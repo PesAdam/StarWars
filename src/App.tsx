@@ -7,11 +7,10 @@ type AppProps = {};
 
 export const App: React.FC<AppProps> = () => {
   const [searchResults, setSearchResults] = useState<SearchResultProps[]>([]);
-  console.log(searchResults);
+  const [expandedResult, setExpandedResult] = useState<number | null>(null);
 
   const handleSearch = (results: any) => {
     if (results) {
-      console.log(results);
       const planets = results.map((planet: any) => ({
         name: planet.name,
         population: planet.population,
@@ -37,16 +36,17 @@ export const App: React.FC<AppProps> = () => {
         <SearchBar onSearch={handleSearch} />
         <div className="cards">
           <ul>
-            {searchResults.map((result) => (
-            <SearchResult key={result.name}
-                          name={result.name} 
-                          population={result.population} 
-                          terrain={result.terrain}
-                          climate={result.climate}  
-                          />
+            {searchResults.map((result, index) => (
+              <SearchResult
+                name={result.name} 
+                population={result.population} 
+                terrain={result.terrain}
+                climate={result.climate}
+                isExpanded={index === expandedResult}
+                onToggleExpand={() => setExpandedResult(index === expandedResult ? null : index)}
+              />
             ))}
           </ul>
-          
         </div>
       </div>
     </>
